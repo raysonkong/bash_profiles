@@ -1,0 +1,5 @@
+## mac 1TB
+
+function st4() {
+  /Applications/Sublime\ Text\ 4.app/Contents/SharedSupport/bin/subl $1
+}
