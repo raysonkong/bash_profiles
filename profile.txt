@@ -11,3 +11,52 @@ function st4() {
 # for using older verison of gatsby
 # ref https://stackoverflow.com/questions/69665222/node-js-17-0-1-gatsby-error-digital-envelope-routinesunsupported-err-os
 export NODE_OPTIONS=--openssl-legacy-provider
+
+
+##########
+Old Mac 500G
+function lazygit() {
+    git add .
+    git commit -a -m "$1"
+    git push -u origin master
+}
+
+
+PATH=$PATH:/Users/raysonkong/Library/Python/3.7/bin
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+function glog() {
+  git log --oneline --decorate --graph --all
+}
+
+function gshow() {
+  git show --format="%nHash : %h%nCommit Message: %s%nParent Hashes: %P" --stat-name-width=50
+}
+
+export PS1="\\w:\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\$ "
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+function st3(){
+  /Applications/Sublime\ Text\ 3.app/Contents/SharedSupport/bin/subl $1
+}
+
+export CLICOLOR=1;
+
+export PATH="$PATH:/usr/local/Cellar/mongodb-community@4.0/4.0.18/bin"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+export PATH="/Users/raysonkong/.local/bin:$PATH"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home'
+
+export PATH="$JAVA_HOME:$PATH"
